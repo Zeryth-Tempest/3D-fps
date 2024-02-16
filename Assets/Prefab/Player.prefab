@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 1073722342539554933}
   - component: {fileID: 8503287734392287632}
   - component: {fileID: 483513211598845975}
+  - component: {fileID: 1198633589053246438}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -257,6 +258,7 @@ MonoBehaviour:
   speed: 5
   gravity: -9.8
   jumpHeight: 1.5
+  crouchTimer: 0
 --- !u!114 &483513211598845975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,3 +274,19 @@ MonoBehaviour:
   cam: {fileID: 2528657378489198097}
   xSensitivity: 30
   ySensitivity: 30
+--- !u!114 &1198633589053246438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900352858915958188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9785f5f35bfe342ba0ffc1a9c7b5f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 3
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
