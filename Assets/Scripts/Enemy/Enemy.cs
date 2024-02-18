@@ -8,8 +8,11 @@ public class Enemy : MonoBehaviour
     private StateMachine stateMachine;
     private NavMeshAgent agent;
     private GameObject player;
+    private Vector3 lastKnowPos;
 
     public NavMeshAgent Agent { get => agent; }
+    public GameObject Player { get => player; }
+    public Vector3 LastKnowPos { get => lastKnowPos; set => lastKnowPos = value; }
 
     public WalkPath path;
     [Header("Sight Values")]
@@ -17,7 +20,7 @@ public class Enemy : MonoBehaviour
     public float fieldOfView = 85f;
     public float eyeHeight;
     [Header("WeaponValues")]
-    public Transform gunbarrel;
+    public Transform gunBarrel;
     [Range(0.1f, 10f)]
     public float fireRate;
     //Just for debugging purposes.
