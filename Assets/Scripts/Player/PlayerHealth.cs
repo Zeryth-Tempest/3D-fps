@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public Image frontHealthBar;
     public Image backHealthBar;
     public TextMeshProUGUI healthText;
+    public int Respawn;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +58,10 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
         lerpTimer = 0f;
+        if(health <= 0f)
+        {
+            SceneManager.LoadScene(Respawn);
+        }
     }
 
     public void RestoreHealth(float healAmount)
